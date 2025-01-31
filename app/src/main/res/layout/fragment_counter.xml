@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragment.CounterFragment">
 
-    <!-- TextView для отображения значения счётчика -->
     <TextView
         android:id="@+id/tvCounter"
         android:layout_width="wrap_content"
@@ -19,7 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Кнопка для увеличения счётчика -->
     <Button
         android:id="@+id/btnIncrease"
         android:layout_width="wrap_content"

@@ -19,22 +19,13 @@ class CounterFragment : Fragment(R.layout.fragment_counter) {
     ): View? {
         binding = FragmentCounterBinding.inflate(inflater, container, false)
 
-        if (savedInstanceState != null) {
-            counter = savedInstanceState.getInt("counter", 0)
-        }
+        binding.tvCounter.text = counter.toString()
 
         binding.btnIncrease.setOnClickListener {
             counter++
             binding.tvCounter.text = counter.toString()
         }
 
-        binding.tvCounter.text = counter.toString()
-
         return binding.root
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putInt("counter", counter)
     }
 }

@@ -3,18 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/counterFragment">
+    app:startDestination="@id/counter">
 
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.navbonus.fragment.ProfileFragment"
-        android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
-
-    <fragment
-        android:id="@+id/counterFragment"
-        android:name="com.example.navbonus.fragment.CounterFragment"
-        android:label="Counter"
-        tools:layout="@layout/fragment_counter" />
+    <include app:graph="@navigation/counter"/>
+    <include app:graph="@navigation/profile"/>
 
 </navigation>
